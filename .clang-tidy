@@ -10,8 +10,11 @@ Checks: >-
   misc-*,
   -modernize-use-trailing-return-type,
   -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
   -cppcoreguidelines-pro-bounds-pointer-arithmetic,
-  -readability-identifier-length
+  -readability-identifier-length,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -readability-magic-numbers
 
 FormatStyle: file
 HeaderFilterRegex: 'src[\\/]'

@@ -26,6 +26,8 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         /arch:AVX2
         /Gw
     )
+
+    target_compile_definitions(GBOne_options INTERFACE _CRT_SECURE_NO_WARNINGS)
 endif()
 
 find_package(SDL3 REQUIRED)
@@ -35,6 +37,7 @@ add_executable(GBOne)
 target_sources(GBOne PRIVATE 
     src/main.cpp
     src/core/System.cpp
+    src/core/memory/Cartridge.cpp
     src/core/video/Ppu.cpp
     src/frontend/Application.cpp
     src/frontend/Renderer.cpp
